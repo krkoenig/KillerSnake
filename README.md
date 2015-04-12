@@ -1,4 +1,4 @@
 # KillerSnake
 Multiplayer Snake game
 
-`Source code from arshadkc 
+`Source code from arshadkc`

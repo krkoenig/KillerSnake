@@ -25,22 +25,12 @@ public class Client : MonoBehaviour
 	private List<message>
 		incMessages = new List<message> ();
 	
-	private static Client instance;
-	public static Client Instance {
-		get {
-			return instance;
-		}
-	}
+	public static Client Instance { get; private set; }
 	
 	void Awake ()
 	{
-		instance = this;
-	}
-
-	// Use this for initialization
-	void Start ()
-	{
-		connect ();
+		Instance = this;
+		DontDestroyOnLoad (this);
 	}
 	
 	// Update is called once per frame
@@ -51,19 +41,21 @@ public class Client : MonoBehaviour
 		}
 	}
 	
-	private void connect ()
+	public void connect ()
 	{
-		try {
-			// get policy if we are on the web or in editor
-			if ((Application.platform == RuntimePlatform.WindowsWebPlayer) || (Application.platform == RuntimePlatform.WindowsEditor)) {
-				Security.PrefetchSocketPolicy (ipAddress, pfrPort);
-			}
+		if (!connectedToServer) {
+			try {
+				// get policy if we are on the web or in editor
+				if ((Application.platform == RuntimePlatform.WindowsWebPlayer) || (Application.platform == RuntimePlatform.WindowsEditor)) {
+					Security.PrefetchSocketPolicy (ipAddress, pfrPort);
+				}
 			
-			cSock = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-			cSock.Connect (new IPEndPoint (IPAddress.Parse (ipAddress), sPort));
-			Connection gsCon = new Connection (cSock);
-		} catch {
-			Debug.Log ("Unable to connect to server.");
+				cSock = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+				cSock.Connect (new IPEndPoint (IPAddress.Parse (ipAddress), sPort));
+				Connection gsCon = new Connection (cSock);
+			} catch {
+				Debug.Log ("Unable to connect to server.");
+			}
 		}
 	}
 	

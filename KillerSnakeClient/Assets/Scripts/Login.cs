@@ -19,12 +19,15 @@ public class Login : MonoBehaviour
 
 	private string username;
 	private string password;
+	
+	Client client;
 
 	// Use this for initialization
 	void Start ()
 	{
 		username = "";
 		password = "";
+		Client.Instance.connect ();
 	}
 
 	void OnGUI ()
@@ -41,6 +44,7 @@ public class Login : MonoBehaviour
 		password = GUI.PasswordField (new Rect (centerX - 25, centerY + 15, 150, 25), password, '*', 20);
 
 		if (GUI.Button (new Rect (centerX - 125, centerY + 60, 100, 25), "Login") && !username.Equals ("") && !password.Equals ("")) {
+			Client.Instance.connect ();
 			checkLoginWithDatabase ();
 		}
 		if (GUI.Button (new Rect (centerX + 25, centerY + 60, 100, 25), "Register")) {

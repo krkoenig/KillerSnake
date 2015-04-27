@@ -24,3 +24,6 @@ D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\LearnToDev01\obj\x8
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\LearnToDev01\bin\Debug\LearnToDev01.exe
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\LearnToDev01\bin\Debug\LearnToDev01.pdb
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\LearnToDev01\obj\x86\Debug\LearnToDev01.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.exe
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.pdb

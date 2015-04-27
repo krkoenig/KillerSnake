@@ -13,3 +13,8 @@ D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\bin\Debug
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.csprojResolveAssemblyReference.cache
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.dll
 D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Debug\scMessage.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Debug\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.pdb

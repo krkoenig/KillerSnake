@@ -67,6 +67,7 @@
     <Compile Include="serverMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="serverTCP.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\scMessage\scMessage.csproj">

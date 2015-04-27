@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
+// TODO add sqlite
 using scMessage;
 
 namespace LearnToDev01
@@ -11,10 +12,14 @@ namespace LearnToDev01
     {
         public static message login(message inc)
         {
-            // Build the message
-            scBool mLogged = isLogged;
-            return new message("temp");
+            string username = inc.getSCObject(0).getString("username");
+            string password = inc.getSCObject(0).getString("password");
 
+            string hash = getHashed(password);
+
+            // Build the message
+            scBool mLogged = isInDatabase;
+            return new message("temp");
         }
 
         public static message register(message inc)
@@ -37,6 +42,24 @@ namespace LearnToDev01
             return strBuilder.ToString();
         }
 
+        private static bool isInDatabase(string username, string hash)
+        {
+            SqliteConnection myConnection = new SqliteConnection();
+            myConnection.ConnectionString = "URI=file:" + Application.dataPath + "/killer_snake.db";
+            myConnection.Open();
+
+            string query = "SELECT * FROM users WHERE username = '" + username.ToUpper() + "';";
+            SqliteCommand cmd = new SqliteCommand(query, myConnection);
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            string dbHash = "";
+            if (rdr.Read())
+            {
+                dbHash = rdr.GetString(1);
+            }
+
+            return hash.Equals(dbHash);
+        }
 
     }
 

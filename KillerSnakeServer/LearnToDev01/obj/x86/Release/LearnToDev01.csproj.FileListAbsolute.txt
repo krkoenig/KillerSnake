@@ -5,3 +5,11 @@ C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\bin\Release\scMessage.pdb
 C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\ResolveAssemblyReference.cache
 C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\LearnToDev01.exe
 C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\LearnToDev01.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Release\LearnToDev01.exe.config
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Release\LearnToDev01.exe
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Release\LearnToDev01.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Release\LearnToDev01.exe
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Release\LearnToDev01.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Release\scMessage.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Release\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Release\LearnToDev01.csprojResolveAssemblyReference.cache

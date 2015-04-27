@@ -3,3 +3,7 @@ C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Release\scMessage.dll
 C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Release\scMessage.pdb
 C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Release\scMessage.dll
 C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Release\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Release\scMessage.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Release\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Release\scMessage.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Release\scMessage.pdb

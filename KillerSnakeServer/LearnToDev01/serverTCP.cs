@@ -59,11 +59,22 @@ namespace LearnToDev01
             }
         }
 
-        public void handleClientData(message incObject)
+        public void handleClientData(Socket cSock, message incObject)
         {
-            output.outToScreen("The client sent a message: " + incObject.messageText);
-        }
+            string head = incObject.getSCObject(0).getString("head");
+            message m;
+            if (head.Equals("LOGIN"))
+            {
+                m = User.login(incObject);
+            } else if (head.Equals("REGISTER"))
+            {
+                m = User.register(incObject);
+            } else {
+                m = new message("Invalid message");
+            }
 
+            sendClientMessage(cSock, m);
+        }
         public void sendClientMessage(Socket cSock, message mes)
         {
             try

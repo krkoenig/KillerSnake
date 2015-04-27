@@ -8,12 +8,12 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using scMessage;
 
-public class clientConnection
+public class Connection
 {
 	public Socket sSock;
 	private int MAX_INC_DATA = 512000;
 
-	public clientConnection (Socket s)
+	public Connection (Socket s)
 	{
 		sSock = s;
 		ThreadPool.QueueUserWorkItem (new WaitCallback (HandleConnection));
@@ -22,7 +22,7 @@ public class clientConnection
 	public void HandleConnection (object state)
 	{
 		Debug.Log ("Connected to server.");
-		Login.Instance.onConnect ();
+		Client.Instance.onConnect ();
 
 		try {
 			while (sSock.Connected) {
@@ -52,7 +52,7 @@ public class clientConnection
 					message incObject = (message)conversionTools.convertBytesToObject (message);
 
 					if (incObject != null) {
-						Login.Instance.addServerMessageToQue (incObject);
+						Client.Instance.addServerMessageToQue (incObject);
 					}
 				} catch (Exception er) {
 					Debug.Log ("There was an error trying to get data: " + er.ToString ());
@@ -62,7 +62,7 @@ public class clientConnection
 		}
 
 		Debug.Log ("Disconnected from server.");
-		Login.Instance.connectedToServer = false;
+		Client.Instance.connectedToServer = false;
 		sSock.Close ();
 	}
 }

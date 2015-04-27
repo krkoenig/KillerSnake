@@ -1,0 +1,7 @@
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\bin\Release\LearnToDev01.exe
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\bin\Release\LearnToDev01.pdb
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\bin\Release\scMessage.dll
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\bin\Release\scMessage.pdb
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\LearnToDev01.exe
+C:\Users\Matt\Desktop\LearnToDev01\LearnToDev01\obj\x86\Release\LearnToDev01.pdb

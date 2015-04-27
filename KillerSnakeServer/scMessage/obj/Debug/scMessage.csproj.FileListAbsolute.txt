@@ -1,0 +1,15 @@
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Debug\scMessage.dll
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Debug\scMessage.pdb
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Debug\scMessage.dll
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Debug\scMessage.pdb
+C:\Users\Matt\Desktop\Learn2Dev Project Files\Server\scMessage\bin\Debug\scMessage.dll
+C:\Users\Matt\Desktop\Learn2Dev Project Files\Server\scMessage\bin\Debug\scMessage.pdb
+C:\Users\Matt\Desktop\Learn2Dev Project Files\Server\scMessage\obj\Debug\scMessage.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Desktop\Learn2Dev Project Files\Server\scMessage\obj\Debug\scMessage.dll
+C:\Users\Matt\Desktop\Learn2Dev Project Files\Server\scMessage\obj\Debug\scMessage.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\bin\Debug\scMessage.dll
+D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\bin\Debug\scMessage.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.csprojResolveAssemblyReference.cache
+D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.dll
+D:\Libraries\Documents\GitHub\KillerSnake\Learn2Dev (Server)\scMessage\obj\Debug\scMessage.pdb

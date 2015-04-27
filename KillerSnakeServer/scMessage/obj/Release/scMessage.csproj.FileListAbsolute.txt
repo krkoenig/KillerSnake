@@ -1,0 +1,5 @@
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Release\scMessage.dll
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\bin\Release\scMessage.pdb
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Release\scMessage.dll
+C:\Users\Matt\Desktop\LearnToDev01\scMessage\obj\Release\scMessage.pdb

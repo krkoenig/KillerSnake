@@ -64,7 +64,7 @@ public class Client : MonoBehaviour
 		connectedToServer = true;
 		
 		// test the connection
-		message testMessage = new message ("LOGIN");
+		message testMessage = new message ("Hello!");
 		SendServerMessage (testMessage);
 	}
 	
@@ -104,7 +104,14 @@ public class Client : MonoBehaviour
 	
 	private void handleData (message mess)
 	{
-		Debug.Log ("The server sent a message: " + mess.messageText);
+		Debug.Log (mess.messageText);
+
+		string command = mess.getSCObject ("head").getString ("command");
+		if (command.Equals ("login")) {
+			GameObject.Find ("Login").GetComponent<Login> ().loginResponse (mess);
+		} else if (command.Equals ("register")) {
+			GameObject.Find ("Register").GetComponent<Register> ().registerResponse (mess);
+		}
 	}
 	
 	public void SendServerMessage (message mes)

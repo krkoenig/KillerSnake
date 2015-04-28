@@ -55,7 +55,7 @@ public class Snake : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
-		Application.LoadLevel (2);
+		Application.LoadLevel ("GameScene");
 	}
 	
 	private void move ()

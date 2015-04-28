@@ -10,13 +10,13 @@ using scMessage;
 
 namespace LearnToDev01
 {
-    class clientConnection
+    class Connection
     {
         private serverTCP svr;
         public Socket cSock;
         private int MAX_INC_DATA = 512000; // half a megabyte
 
-        public clientConnection(Socket s, serverTCP sv)
+        public Connection(Socket s, serverTCP sv)
         {
             svr = sv;
             cSock = s;
@@ -27,9 +27,6 @@ namespace LearnToDev01
         {
             // broadcast new connection
             output.outToScreen("A client connected from the IP address: " + cSock.RemoteEndPoint.ToString());
-
-            // TODO: Remove the test message
-            svr.sendClientMessage(cSock, new message("testMessage"));
 
             try
             {
@@ -97,7 +94,7 @@ namespace LearnToDev01
                         if (incObject != null)
                         {
                             // send data to handler
-                            svr.handleClientData(incObject);
+                            svr.handleClientData(cSock, incObject);
                         }
                     }
                     catch { }

@@ -45,36 +45,29 @@ public class Login : MonoBehaviour
 
 		if (GUI.Button (new Rect (centerX - 125, centerY + 60, 100, 25), "Login") && !username.Equals ("") && !password.Equals ("")) {
 			Client.Instance.connect ();
-			checkLoginWithDatabase ();
+			sendLogin ();
 		}
 		if (GUI.Button (new Rect (centerX + 25, centerY + 60, 100, 25), "Register")) {
 			// Load the register scene			
-			Application.LoadLevel (1);
+			Application.LoadLevel ("RegisterScene");
 		}
 	}
 
-	private void checkLoginWithDatabase ()
+	private void sendLogin ()
 	{
-		SqliteConnection myConnection = new SqliteConnection ();
-		myConnection.ConnectionString = "URI=file:" + Application.dataPath + "/killer_snake.db";
-		myConnection.Open ();
-
-		string query = "SELECT * FROM users WHERE username = '" + username.ToUpper () + "';";
-		SqliteCommand cmd = new SqliteCommand (query, myConnection);
-		SqliteDataReader rdr = cmd.ExecuteReader ();
-
-		string dbHash = "";
-		string salt = "";
-		if (rdr.Read ()) {
-			dbHash = rdr.GetString (1);
-			salt = rdr.GetString (2);
+		message m = new message ("Login request");
+		scObject head = new scObject ("head");
+		head.addString ("command", "login");
+		head.addString ("username", username);
+		head.addString ("password", password);
+		m.addSCObject (head);
+		Client.Instance.SendServerMessage (m);
+	}
+	
+	public void loginResponse (message m)
+	{
+		if (m.getSCObject ("head").getBool ("success")) {
+			Application.LoadLevel ("GameScene");
 		}
-
-		if (dbHash.Equals (password)) {
-			Application.LoadLevel (2);
-		}
-
-		rdr.Close ();
-		myConnection.Close ();
-	}	
+	}
 }

@@ -17,8 +17,8 @@ namespace LearnToDev01
         private static Socket
             policyFileListenSocket, clientListenSocket;
 
-        private static List<clientConnection>
-            clients = new List<clientConnection>();
+        private static List<Connection>
+            clients = new List<Connection>();
 
         public serverTCP()
         {
@@ -55,26 +55,29 @@ namespace LearnToDev01
             while (serverMain.keepAlive)
             {
                 Socket cSocket = clientListenSocket.Accept();
-                clientConnection newCon = new clientConnection(cSocket, this);
+                Connection newCon = new Connection(cSocket, this);
             }
         }
 
         public void handleClientData(Socket cSock, message incObject)
         {
-            string head = incObject.getSCObject(0).getString("head");
+            output.outToScreen(incObject.messageText);
+
+            string command = incObject.getSCObject("head").getString("command");
             message m;
-            if (head.Equals("LOGIN"))
+            if (command.Equals("login"))
             {
                 m = User.login(incObject);
-            } else if (head.Equals("REGISTER"))
+            }
+            else if (command.Equals("register"))
             {
                 m = User.register(incObject);
             } else {
-                m = new message("Invalid message");
+                m = new message("invalid");
             }
-
             sendClientMessage(cSock, m);
         }
+
         public void sendClientMessage(Socket cSock, message mes)
         {
             try

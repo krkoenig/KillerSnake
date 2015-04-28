@@ -32,3 +32,13 @@ C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\De
 C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.exe
 C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.exe.config
 C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.exe.config
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.exe
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\obj\x86\Debug\LearnToDev01.csprojResolveAssemblyReference.cache
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.exe
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\LearnToDev01.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\scMessage.dll
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.dll
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\scMessage.pdb
+D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.pdb

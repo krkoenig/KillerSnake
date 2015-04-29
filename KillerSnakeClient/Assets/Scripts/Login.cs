@@ -10,10 +10,6 @@ using scMessage;
 using System.Security.Cryptography;
 using System.Text;
 
-// For connecting to the database
-using Mono.Data.SqliteClient;
-using System.Data;
-
 public class Login : MonoBehaviour
 {
 

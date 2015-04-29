@@ -1,0 +1,54 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvumdshim.dll 9.18.13.3165]
+    Renderer: NVIDIA GeForce GT 555M   
+    Vendor:   NVIDIA
+    VRAM:     1488 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\scMessage.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\scMessage.dll into Unity Child Domain
+- Completed reload, in  0.059 seconds
+desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\System.dll (this message is harmless)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.928667 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 123.
+Total: 0.275826 ms (FindLiveObjects: 0.043146 ms CreateObjectMapping: 0.028764 ms MarkObjects: 0.189534 ms  DeleteObjects: 0.012841 ms)
+
+Connected to server.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+login response
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.591717 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 194.
+Total: 0.382150 ms (FindLiveObjects: 0.030304 ms CreateObjectMapping: 0.024654 ms MarkObjects: 0.315890 ms  DeleteObjects: 0.010272 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.191139 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 196.
+Total: 0.517752 ms (FindLiveObjects: 0.038009 ms CreateObjectMapping: 0.032873 ms MarkObjects: 0.434542 ms  DeleteObjects: 0.011300 ms)
+
+Disconnected from server.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+

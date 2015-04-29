@@ -42,3 +42,5 @@ D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Deb
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.dll
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\scMessage.pdb
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.dll
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\LearnToDev01\bin\Debug\System.Data.SQLite.pdb

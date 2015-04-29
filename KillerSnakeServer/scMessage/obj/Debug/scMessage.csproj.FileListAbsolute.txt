@@ -21,3 +21,4 @@ D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Debug\
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\bin\Debug\scMessage.pdb
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.dll
 D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.pdb
+C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\scMessage\obj\Debug\scMessage.csprojResolveAssemblyReference.cache

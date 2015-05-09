@@ -10,9 +10,9 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using scMessage;
 
-namespace LearnToDev01
-{
-	 class Connection
+//namespace LearnToDev01
+//{
+public class Connection
 	{
 		private serverTCP svr;
 		public Socket cSock;
@@ -108,4 +108,4 @@ namespace LearnToDev01
 			cSock.Close();
 		}
  }
-}
+//}

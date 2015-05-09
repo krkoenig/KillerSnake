@@ -9,9 +9,9 @@ using System.Net.Sockets;
 using System.Threading;
 using scMessage;
 
-namespace LearnToDev01
-{
-	class serverTCP {
+//namespace LearnToDev01
+//{
+public class serverTCP {
 		private static int
 			clientPort = 3000, policyFilePort = 2999;
 		
@@ -91,4 +91,4 @@ namespace LearnToDev01
 			catch { }
 		}
  }
-}
+//}

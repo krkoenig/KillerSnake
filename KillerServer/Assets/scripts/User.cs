@@ -9,9 +9,9 @@ using scMessage;
 using System.Data;
 using Mono.Data.Sqlite;
 
-namespace LearnToDev01
-{
-  class User {
+//namespace LearnToDev01
+//{
+public class User {
 		private const string CONNECTION_STRING = "Data Source=db/killer_snake.s3db;";
 		
 		public static message login(message inc)
@@ -115,4 +115,4 @@ namespace LearnToDev01
 			
 		}
  }
-}
+//}

@@ -5,9 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LearnToDev01
-{
- public class output {
+public class output {
 		//public GUIText serverScreen;
 		public static void outToScreen(string text)
 		{
@@ -15,4 +13,4 @@ namespace LearnToDev01
 			//serverScreen.text = text;
 		}
 	}
-}
+

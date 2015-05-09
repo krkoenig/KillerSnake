@@ -5,13 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LearnToDev01
-{
+//namespace LearnToDev01
+//{
  public class serverMain : MonoBehaviour{
+
+
 
 		public static bool keepAlive = true;
 		
-	static void Start()
+	static void Main()
 		{
 			// start server
 			serverTCP startTCP = new serverTCP();
@@ -26,4 +28,4 @@ namespace LearnToDev01
 			}
 		}
  }
-}
+//}

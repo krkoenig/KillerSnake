@@ -10,9 +10,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Net;
 using System.Net.Sockets;
 
-namespace LearnToDev01
-{
-	class policyFileConnection {
+//namespace LearnToDev01
+//{
+public class policyFileConnection {
 		private Socket cSock;
 		
 		private int MAX_INC_DATA = 25;
@@ -92,4 +92,4 @@ namespace LearnToDev01
 			return result;
 		}
  }
-}
+//}

@@ -49,20 +49,19 @@
      <Compile Include="Assets\scripts\Connection.cs" />
      <Compile Include="Assets\scripts\User.cs" />
      <Compile Include="Assets\scripts\output.cs" />
-     <Compile Include="Assets\scripts\policyFileConnection.cs" />
      <Compile Include="Assets\scripts\serverMain.cs" />
      <Compile Include="Assets\scripts\serverTCP.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.Sqlite">
- <HintPath>C:/Users/tommy/Desktop/KillerSnake/KillerServer/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ <HintPath>C:/Users/tommy/Desktop/spring15/ics168/KillerServer/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="scMessage">
- <HintPath>C:/Users/tommy/Desktop/KillerSnake/KillerServer/Assets/Plugins/scMessage.dll</HintPath>
+ <HintPath>C:/Users/tommy/Desktop/spring15/ics168/KillerServer/Assets/Plugins/scMessage.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>C:/Users/tommy/Desktop/KillerSnake/KillerServer/Assets/Plugins/System.Data.dll</HintPath>
+ <HintPath>C:/Users/tommy/Desktop/spring15/ics168/KillerServer/Assets/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

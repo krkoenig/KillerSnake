@@ -13,10 +13,10 @@ using scMessage;
 //{
 public class serverTCP {
 		private static int
-			clientPort = 3000, policyFilePort = 2999;
+			clientPort = 3000;
 		
 		private static Socket
-			policyFileListenSocket, clientListenSocket;
+		    clientListenSocket;
 		
 		private static List<Connection>
 			clients = new List<Connection>();
@@ -25,30 +25,15 @@ public class serverTCP {
 		{
 			try
 			{
-				// listen for policy requests
-				policyFileListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-				policyFileListenSocket.Bind(new IPEndPoint(IPAddress.Any, policyFilePort));
-				policyFileListenSocket.Listen(int.MaxValue);
-				ThreadPool.QueueUserWorkItem(new WaitCallback(listenForPFR));
-				
 				// listen for clients
 				clientListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 				clientListenSocket.Bind(new IPEndPoint(IPAddress.Any, clientPort));
 				clientListenSocket.Listen(int.MaxValue);
 				ThreadPool.QueueUserWorkItem(new WaitCallback(listenForClients));
 				
-				output.outToScreen("Waiting for client policy file requests on port " + policyFilePort + " and clients on port " + clientPort);
+				output.outToScreen("Waiting for clients on port " + clientPort);
 			}
 			catch { }
-		}
-		
-		private void listenForPFR(object x)
-		{
-			while (serverMain.keepAlive)
-			{
-				Socket pfRequest = policyFileListenSocket.Accept();
-				policyFileConnection newRequest = new policyFileConnection(pfRequest);
-			}
 		}
 		
 		private void listenForClients(object x)

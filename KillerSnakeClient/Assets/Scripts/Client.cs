@@ -10,8 +10,7 @@ public class Client : MonoBehaviour
 {
 
 	private int
-		sPort = 3000, // server port
-		pfrPort = 2999; // policy file request port
+		sPort = 3000;// server port
 	
 	private Socket
 		cSock; // client socket
@@ -45,11 +44,6 @@ public class Client : MonoBehaviour
 	{
 		if (!connectedToServer) {
 			try {
-				// get policy if we are on the web or in editor
-				if ((Application.platform == RuntimePlatform.WindowsWebPlayer) || (Application.platform == RuntimePlatform.WindowsEditor)) {
-					Security.PrefetchSocketPolicy (ipAddress, pfrPort);
-				}
-			
 				cSock = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 				cSock.Connect (new IPEndPoint (IPAddress.Parse (ipAddress), sPort));
 				Connection gsCon = new Connection (cSock);

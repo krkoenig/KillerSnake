@@ -54,6 +54,7 @@ public class Register : MonoBehaviour
 			} else if (!password.Equals (confirm)) {
 				warning = "Passwords don't match!";
 			} else {
+				Client.Instance.connect ();
 				sendRegister ();
 			}
 

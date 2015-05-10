@@ -1,7 +1,7 @@
 Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [nvumdshim.dll 9.18.13.3165]
+    Version:  Direct3D 9.0c [nvumdshimx.dll 9.18.13.3165]
     Renderer: NVIDIA GeForce GT 555M   
     Vendor:   NVIDIA
     VRAM:     1488 MB (via DXGI)
@@ -15,7 +15,7 @@ Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\
 Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\scMessage.dll (this message is harmless)
 Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\scMessage.dll into Unity Child Domain
-- Completed reload, in  0.059 seconds
+- Completed reload, in  0.054 seconds
 desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -23,10 +23,10 @@ desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeClient\KillerSnake_Data\Managed\System.dll (this message is harmless)
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.928667 ms
+UnloadTime: 0.548057 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 123.
-Total: 0.275826 ms (FindLiveObjects: 0.043146 ms CreateObjectMapping: 0.028764 ms MarkObjects: 0.189534 ms  DeleteObjects: 0.012841 ms)
+Total: 0.230626 ms (FindLiveObjects: 0.051364 ms CreateObjectMapping: 0.025168 ms MarkObjects: 0.144333 ms  DeleteObjects: 0.008218 ms)
 
 Connected to server.
  
@@ -37,16 +37,10 @@ login response
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.591717 ms
+UnloadTime: 0.348764 ms
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 194.
-Total: 0.382150 ms (FindLiveObjects: 0.030304 ms CreateObjectMapping: 0.024654 ms MarkObjects: 0.315890 ms  DeleteObjects: 0.010272 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.191139 ms
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 196.
-Total: 0.517752 ms (FindLiveObjects: 0.038009 ms CreateObjectMapping: 0.032873 ms MarkObjects: 0.434542 ms  DeleteObjects: 0.011300 ms)
+Total: 0.231653 ms (FindLiveObjects: 0.024141 ms CreateObjectMapping: 0.015922 ms MarkObjects: 0.184911 ms  DeleteObjects: 0.006163 ms)
 
 Disconnected from server.
  

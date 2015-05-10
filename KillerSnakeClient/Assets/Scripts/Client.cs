@@ -9,21 +9,17 @@ using scMessage;
 public class Client : MonoBehaviour
 {
 
-	private int
-		sPort = 3000;// server port
+	private const int PORT = 3000;// server port
 	
-	private Socket
-		cSock; // client socket
+	private Socket socket; // server socket
 	
 	private string
 		ipAddress = "127.0.0.1"; // server ip address
 	
-	public bool
-		connectedToServer = false;
+	public bool connectedToServer = false;
 	
-	private List<message>
-		incMessages = new List<message> ();
-	
+	private Queue<message> incMessages = new Queue<message> ();
+		
 	public static Client Instance { get; private set; }
 	
 	void Awake ()
@@ -35,76 +31,46 @@ public class Client : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (incMessages.Count > 0) {
-			doMessages ();
+		for (int i = 0; i < incMessages.Count; i++) {
+			handleData (incMessages.Dequeue ());
 		}
+	}
+	
+	void OnApplicationQuit ()
+	{		
+		socket.Close ();
 	}
 	
 	public void connect ()
 	{
 		if (!connectedToServer) {
 			try {
-				cSock = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-				cSock.Connect (new IPEndPoint (IPAddress.Parse (ipAddress), sPort));
-				Connection gsCon = new Connection (cSock);
+				socket = new Socket (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+				socket.Connect (new IPEndPoint (IPAddress.Parse (ipAddress), PORT));
+				new Connection (socket);
+				
+				connectedToServer = true;
+				
 			} catch {
 				Debug.Log ("Unable to connect to server.");
 			}
 		}
 	}
 	
-	public void onConnect ()
+	public void addServerMessageToQueue (message msg)
 	{
-		connectedToServer = true;
-		
-		// test the connection
-		message testMessage = new message ("Hello!");
-		SendServerMessage (testMessage);
+		incMessages.Enqueue (msg);
 	}
 	
-	private void OnApplicationQuit ()
+	private void handleData (message msg)
 	{
-		try {
-			cSock.Close ();
-		} catch {
-		}
-	}
-	
-	public void addServerMessageToQue (message msg)
-	{
-		incMessages.Add (msg);
-	}
-	
-	private void doMessages ()
-	{
-		// do messages
-		List<message> completedMessages = new List<message> ();
-		for (int i = 0; i < incMessages.Count; i++) {
-			try {
-				handleData (incMessages [i]);
-				completedMessages.Add (incMessages [i]);
-			} catch {
-			}
-		}
-		
-		// delete completed messages
-		for (int i = 0; i < completedMessages.Count; i++) {
-			try {
-				incMessages.Remove (completedMessages [i]);
-			} catch {
-			}
-		}
-	}
-	
-	private void handleData (message mess)
-	{
-		Debug.Log (mess.messageText);
+		Debug.Log (msg.messageText);
 
-		string command = mess.getSCObject ("head").getString ("command");
+		string command = msg.getSCObject ("head").getString ("command");
 		if (command.Equals ("login")) {
-			GameObject.Find ("Login").GetComponent<Login> ().loginResponse (mess);
+			GameObject.Find ("Login").GetComponent<Login> ().loginResponse (msg);
 		} else if (command.Equals ("register")) {
-			GameObject.Find ("Register").GetComponent<Register> ().registerResponse (mess);
+			GameObject.Find ("Register").GetComponent<Register> ().registerResponse (msg);
 		}
 	}
 	
@@ -117,7 +83,7 @@ public class Client : MonoBehaviour
 				byte[] readyMessage = conversionTools.wrapMessage (messageObject);
 				
 				// send completed message
-				cSock.Send (readyMessage);
+				socket.Send (readyMessage);
 			} catch {
 				Debug.Log ("There was an error sending server message " + mes.messageText);
 			}

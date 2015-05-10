@@ -16,14 +16,11 @@ public class Login : MonoBehaviour
 	private string username;
 	private string password;
 	
-	Client client;
-
 	// Use this for initialization
 	void Start ()
 	{
 		username = "";
 		password = "";
-		Client.Instance.connect ();
 	}
 
 	void OnGUI ()

@@ -13,12 +13,13 @@ public class Client : MonoBehaviour
 	
 	private Socket socket; // server socket
 	
-	private string
-		ipAddress = "127.0.0.1"; // server ip address
+	private string ipAddress = "127.0.0.1"; // server ip address
 	
 	public bool connectedToServer = false;
 	
 	private Queue<message> incMessages = new Queue<message> ();
+	
+	public string username;
 		
 	public static Client Instance { get; private set; }
 	
@@ -66,11 +67,14 @@ public class Client : MonoBehaviour
 	{
 		Debug.Log (msg.messageText);
 
-		string command = msg.getSCObject ("head").getString ("command");
-		if (command.Equals ("login")) {
+		if (msg.messageText.Equals ("login")) {
 			GameObject.Find ("Login").GetComponent<Login> ().loginResponse (msg);
-		} else if (command.Equals ("register")) {
+		} else if (msg.messageText.Equals ("register")) {
 			GameObject.Find ("Register").GetComponent<Register> ().registerResponse (msg);
+		} else if (msg.messageText.Equals ("lobby")) {
+			GameObject.Find ("LobbyManager").GetComponent<LobbyManager> ().receiveUpdates (msg);
+		} else if (msg.messageText.Equals ("game")) {
+			GameObject.Find ("GameManager").GetComponent<GameManager> ().receiveUpdates (msg);
 		}
 	}
 	

@@ -5,11 +5,11 @@ public class SmoothCamera : MonoBehaviour
 {
 	
 	public float dampTime = 0.15f;
-	public Transform target;
-	public Transform top;
-	public Transform bottom;
-	public Transform left;
-	public Transform right;
+	private Transform target;
+	private Transform top;
+	private Transform bottom;
+	private Transform left;
+	private Transform right;
 	
 	
 	private float minX;
@@ -19,11 +19,19 @@ public class SmoothCamera : MonoBehaviour
 	
 	void Start ()
 	{
+		target = GameObject.Find ("UserSnake").transform;
+		top = GameObject.Find ("BorderTop").transform;
+		bottom = GameObject.Find ("BorderBottom").transform;
+		left = GameObject.Find ("BorderLeft").transform;
+		right = GameObject.Find ("BorderRight").transform;
+	
 		var vertExtent = GetComponent<Camera> ().orthographicSize;    
 		var horzExtent = vertExtent * Screen.width / Screen.height;
 		
 		float mapY = top.position.y - bottom.position.y;
 		float mapX = right.position.x - left.position.x;
+		
+		
 		
 		// Calculations assume map is position at the origin
 		minX = horzExtent - mapX / 2.0f;

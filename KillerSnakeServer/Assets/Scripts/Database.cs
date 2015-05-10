@@ -27,17 +27,21 @@ class Database
 
 	public message login (message inc)
 	{
-		string username = inc.getSCObject ("head").getString ("username");
-		string password = inc.getSCObject ("head").getString ("password");
+		string username = inc.getSCObject ("login").getString ("username");
+		string password = inc.getSCObject ("login").getString ("password");
            
 		string hash = getHashed (password);
 
 		bool exists = isInDatabase (username, hash);
+		
+		if (exists) {
+			GameObject.Find ("PlayerList").GetComponent<PlayerList> ().addPlayer (username);
+			GameObject.Find ("LobbyManager").GetComponent<LobbyManager> ().ready.Add (false);
+		}
 
 		// Build the message
-		message m = new message ("login response");
-		scObject head = new scObject ("head");
-		head.addString ("command", "login");
+		message m = new message ("login");
+		scObject head = new scObject ("login");
 		head.addBool ("success", exists);
 		m.addSCObject (head);
 		return m;
@@ -45,17 +49,16 @@ class Database
 
 	public message register (message inc)
 	{
-		string username = inc.getSCObject ("head").getString ("username");
-		string password = inc.getSCObject ("head").getString ("password");
+		string username = inc.getSCObject ("register").getString ("username");
+		string password = inc.getSCObject ("register").getString ("password");
 
 		string hash = getHashed (password);
 
 		bool success = isNewUser (username, hash);
 
 		// Build the message
-		message m = new message ("register response");
-		scObject head = new scObject ("head");
-		head.addString ("command", "register");
+		message m = new message ("register");
+		scObject head = new scObject ("register");
 		head.addBool ("success", success);
 		m.addSCObject (head);
 		return m;

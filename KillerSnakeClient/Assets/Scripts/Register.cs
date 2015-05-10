@@ -63,9 +63,8 @@ public class Register : MonoBehaviour
 
 	private void sendRegister ()
 	{
-		message m = new message ("Register request");
-		scObject head = new scObject ("head");
-		head.addString ("command", "register");
+		message m = new message ("register");
+		scObject head = new scObject ("register");
 		head.addString ("username", username);
 		head.addString ("password", password);
 		m.addSCObject (head);
@@ -74,7 +73,7 @@ public class Register : MonoBehaviour
 
 	public void registerResponse (message m)
 	{
-		if (m.getSCObject ("head").getBool ("success")) {
+		if (m.getSCObject ("register").getBool ("success")) {
 			Application.LoadLevel ("LoginScene");
 		} else {
 			warning = "Username is already taken!";

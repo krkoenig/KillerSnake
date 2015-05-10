@@ -48,9 +48,8 @@ public class Login : MonoBehaviour
 
 	private void sendLogin ()
 	{
-		message m = new message ("Login request");
-		scObject head = new scObject ("head");
-		head.addString ("command", "login");
+		message m = new message ("login");
+		scObject head = new scObject ("login");
 		head.addString ("username", username);
 		head.addString ("password", password);
 		m.addSCObject (head);
@@ -59,8 +58,9 @@ public class Login : MonoBehaviour
 	
 	public void loginResponse (message m)
 	{
-		if (m.getSCObject ("head").getBool ("success")) {
-			Application.LoadLevel ("GameScene");
+		if (m.getSCObject ("login").getBool ("success")) {
+			Client.Instance.username = username;
+			Application.LoadLevel ("LobbyScene");
 		}
 	}
 }

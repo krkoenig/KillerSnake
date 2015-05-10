@@ -12,11 +12,11 @@ Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\
 Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll (this message is harmless)
-Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll into Unity Child Domain
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
 Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
-- Completed reload, in  0.056 seconds
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll into Unity Child Domain
+- Completed reload, in  0.055 seconds
 desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -26,3 +26,28 @@ Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Data.dll (this message is harmless)
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Transactions.dll (this message is harmless)
 Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Xml.dll (this message is harmless)
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/.\libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+Fallback handler could not load library C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Mono/libC:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+DllNotFoundException: C:/Users/Kyle/Documents/GitHub/KillerSnake/KillerSnakeServer/KillerSnakeServer_Data/Plugins/sqlite3.dll
+  at (wrapper managed-to-native) Mono.Data.Sqlite.UnsafeNativeMethods:sqlite3_open_v2 (byte[],intptr&,int,intptr)
+  at Mono.Data.Sqlite.SQLite3.Open (System.String strFilename, SQLiteOpenFlagsEnum flags, Int32 maxPoolSize, Boolean usePool) [0x00000] in <filename unknown>:0 
+  at Mono.Data.Sqlite.SqliteConnection.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) Mono.Data.Sqlite.SqliteConnection:Open ()
+  at Database..ctor () [0x00000] in <filename unknown>:0 
+  at Server..ctor () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

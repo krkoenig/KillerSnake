@@ -8,22 +8,6 @@ using System.Net.Sockets;
 using System.Threading;
 using scMessage;
 
-public class Pair<T, U>
-{
-	public Pair ()
-	{
-	}
-	
-	public Pair (T first, U second)
-	{
-		this.First = first;
-		this.Second = second;
-	}
-	
-	public T First { get; set; }
-	public U Second { get; set; }
-};
-
 class Server : MonoBehaviour
 {
 	private const int PORT = 3000;
@@ -33,6 +17,8 @@ class Server : MonoBehaviour
 	public static Server Instance { get; private set; }
 	
 	private Queue<Pair<Connection,message>> incMessages = new Queue<Pair<Connection,message>> ();
+				
+	private List<Connection> clients = new List<Connection> ();
 				
 	private Database db = new Database ();
 			
@@ -60,7 +46,7 @@ class Server : MonoBehaviour
 	private void Listen ()
 	{
 		while (listening) {
-			new Connection (listener.Accept ());
+			clients.Add (new Connection (listener.Accept ()));
 		}
 	}
 	
@@ -96,13 +82,17 @@ class Server : MonoBehaviour
 	{
 		print (msg.messageText);
 
-		string command = msg.getSCObject ("head").getString ("command");
 		message m;
 				
-		if (command.Equals ("login")) {
+		if (msg.messageText.Equals ("login")) {
 			m = db.login (msg);
-		} else if (command.Equals ("register")) {
+		} else if (msg.messageText.Equals ("register")) {
 			m = db.register (msg);
+		} else if (msg.messageText.Equals ("lobby")) {
+			m = GameObject.Find ("LobbyManager").GetComponent<LobbyManager> ().receiveUpdates (msg);
+		} else if (msg.messageText.Equals ("game")) {
+			m = GameObject.Find ("GameManager").GetComponent<GameManager> ().receiveUpdates (msg);
+			
 		} else {
 			m = new message ("invalid");
 		}
@@ -118,6 +108,13 @@ class Server : MonoBehaviour
 			byte[] readyToSend = conversionTools.wrapMessage (messageObject);
 			client.socket.Send (readyToSend);
 		} catch {
+		}
+	}
+	
+	public void broadcast (message mes)
+	{
+		foreach (Connection c in clients) {
+			sendClientMessage (c, mes);
 		}
 	}
 }

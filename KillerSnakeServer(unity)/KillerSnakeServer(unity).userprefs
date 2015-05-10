@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\serverMain.cs">
+    <Files>
+      <File FileName="Assets\serverMain.cs" Line="23" Column="4" />
+      <File FileName="Assets\policyFileConnection.cs" Line="1" Column="1" />
+      <File FileName="Assets\serverTCP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Connection.cs" Line="5" Column="19" />
+      <File FileName="Assets\output.cs" Line="1" Column="1" />
+      <File FileName="Assets\User.cs" Line="106" Column="53" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

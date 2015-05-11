@@ -60,6 +60,10 @@ public class LobbyManager : MonoBehaviour
 		start = lobby.getBool ("start");
 		
 		int numPlayers = lobby.getInt ("num_player");
+		int userID = lobby.getInt ("start_id");
+
+		GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId = userID;
+
 		Debug.Log (numPlayers);
 		// Check if there is a new player
 		for (int i = 0; i < numPlayers; i++) {

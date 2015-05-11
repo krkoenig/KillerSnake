@@ -43,7 +43,10 @@ public class LobbyManager : MonoBehaviour
 
 	private void sendStart ()
 	{
-		Server.Instance.broadcast (buildLobbyMessage (true));
+		List<Connection> clients = Server.Instance.getClients ();
+		for (int i = 0; i < clients.Count; i++) {
+			Server.Instance.sendClientMessage (clients [i], buildLobbyMessage (true, i));
+		}
 	}
 	
 	public message receiveUpdates (message m)
@@ -53,25 +56,29 @@ public class LobbyManager : MonoBehaviour
 		bool readied = lobby.getBool ("ready");
 							
 		Debug.Log (playerList.players.Count);
-										
+
+		int userID = 0;
+
 		// Check if the player exists
 		for (int i = 0; i < playerList.players.Count; i++) {
 			if (lobby.getString ("username").Equals (playerList.players [i].username)) {
 				ready [i] = readied;
+				userID = i;
 			}
 		}
 
 		// TODO: Worry about players leaving
-		return buildLobbyMessage (false);
+		return buildLobbyMessage (false, userID);
 	}
 	
-	private message buildLobbyMessage (bool start)
+	private message buildLobbyMessage (bool start, int id)
 	{
 		message m = new message ("lobby");
 		scObject lobby = new scObject ("lobby");
 		lobby.addInt ("num_player", playerList.players.Count);
 		
 		lobby.addBool ("start", start);
+		lobby.addInt ("start_id", id);
 		
 		for (int i = 0; i < playerList.players.Count; i++) {
 			lobby.addString (i + "_username", playerList.players [i].username);

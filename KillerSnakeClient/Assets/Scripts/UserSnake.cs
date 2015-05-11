@@ -26,7 +26,11 @@ public class UserSnake : Snake
 
 		// Sets the snake to start in the center
 		// TODO: Once multiplayer, the player number will matter
-		transform.position = new Vector3 (0, 0);
+
+		int userID = GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId;
+
+
+		transform.position = new Vector3 (0, userID, 0);
 		transform.rotation = dir;
 
 		calcSpeed ();

@@ -6,6 +6,8 @@ public class PlayerList : MonoBehaviour
 {
 	public List<Player> players = new List<Player> ();
 
+	public int startId;
+
 	void Awake ()
 	{
 		DontDestroyOnLoad (this);

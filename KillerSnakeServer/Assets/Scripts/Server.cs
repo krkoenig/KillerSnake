@@ -25,7 +25,7 @@ class Server : MonoBehaviour
 	private string output = "";
 	
 	private bool listening = true;
-					
+						
 	void Awake ()
 	{
 		Instance = this;
@@ -111,10 +111,8 @@ class Server : MonoBehaviour
 		}
 	}
 	
-	public void broadcast (message mes)
+	public List<Connection> getClients ()
 	{
-		foreach (Connection c in clients) {
-			sendClientMessage (c, mes);
-		}
+		return clients;
 	}
 }

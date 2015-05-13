@@ -9,11 +9,11 @@ using scMessage;
 public class Client : MonoBehaviour
 {
 
-	private const int PORT = 3000;// server port
+	private const int PORT = 10093;// server port
 	
 	private Socket socket; // server socket
 	
-	private string ipAddress = "127.0.0.1"; // server ip address
+	public string ipAddress = "127.0.0.1"; // server ip address
 	
 	public bool connectedToServer = false;
 	

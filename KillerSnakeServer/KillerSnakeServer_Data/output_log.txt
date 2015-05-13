@@ -2,30 +2,30 @@ Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
+    Renderer: NVIDIA GeForce GT 555M    (ID=0xdcd)
     Vendor:   NVIDIA
-    VRAM:     1991 MB
+    VRAM:     1488 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
-Loading D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll (this message is harmless)
-Loading D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll into Unity Child Domain
+- Completed reload, in  0.056 seconds
+desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.dll (this message is harmless)
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Data.dll (this message is harmless)
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Transactions.dll (this message is harmless)
-Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Xml.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Data.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Xml.dll (this message is harmless)
 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -71,312 +71,17 @@ Platform assembly: D:\Libraries\Documents\GitHub\KillerSnake\KillerSnakeServer\K
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.259608 ms
+UnloadTime: 2.811685 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 163.
-Total: 0.271381 ms (FindLiveObjects: 0.037431 ms CreateObjectMapping: 0.012678 ms MarkObjects: 0.214327 ms  DeleteObjects: 0.005735 ms)
+Total: 0.270690 ms (FindLiveObjects: 0.028250 ms CreateObjectMapping: 0.014382 ms MarkObjects: 0.220353 ms  DeleteObjects: 0.006677 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
+  at Server.handleData (scMessage.message msg) [0x00000] in <filename unknown>:0 
   at Server.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)

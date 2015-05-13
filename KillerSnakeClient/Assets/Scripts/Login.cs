@@ -31,6 +31,8 @@ public class Login : MonoBehaviour
 		// Make a background box
 		GUI.Box (new Rect (centerX - 150, centerY - 100, 300, 200), "Login");
 
+		GUI.Box (new Rect (centerX - 125, centerY - 45, 100, 25), "IP:");
+		Client.Instance.ipAddress = GUI.TextField (new Rect (centerX - 25, centerY - 45, 150, 25), Client.Instance.ipAddress, 20);
 		GUI.Box (new Rect (centerX - 125, centerY - 15, 100, 25), "Username:");
 		username = GUI.TextField (new Rect (centerX - 25, centerY - 15, 150, 25), username, 20);
 		GUI.Box (new Rect (centerX - 125, centerY + 15, 100, 25), "Password:");

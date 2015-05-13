@@ -10,7 +10,7 @@ using scMessage;
 
 class Server : MonoBehaviour
 {
-	private const int PORT = 3000;
+	private const int PORT = 10093;
 
 	private Socket listener;
 

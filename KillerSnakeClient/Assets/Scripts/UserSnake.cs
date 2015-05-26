@@ -15,9 +15,9 @@ public class UserSnake : Snake
 	private Quaternion lastRotation;
 
 	// Bools for food eating
-	private bool apple;
-	private bool onion;
-	private bool mouse;
+	private bool apple = false;
+	private bool onion = false;
+	private bool rat = false;
 
 	// Use this for initialization
 	void Start ()
@@ -37,7 +37,7 @@ public class UserSnake : Snake
 
 		move ();
 		
-		InvokeRepeating ("grow", 0.0f, 1.0f);
+		//InvokeRepeating ("grow", 0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -48,7 +48,23 @@ public class UserSnake : Snake
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
-		Application.LoadLevel ("GameScene");
+		//food
+		if (coll.name.StartsWith ("apple")) {
+			apple = true;
+
+			Destroy (coll.gameObject);
+		} else if (coll.name.StartsWith ("onion")) {
+			onion = true;
+			
+			Destroy (coll.gameObject);
+		} else if (coll.name.StartsWith ("rat")) {
+			rat = true;
+			
+			Destroy (coll.gameObject);
+		} else {
+			Application.LoadLevel ("GameScene");
+		}
+
 	}
 	
 	private void move ()
@@ -66,6 +82,11 @@ public class UserSnake : Snake
 		lastRotation = transform.rotation;
 		transform.Translate (Vector2.right);
 	
+		if (apple) {
+			grow ();
+			apple = false;
+		}
+
 		Invoke ("move", speed);
 	}
 

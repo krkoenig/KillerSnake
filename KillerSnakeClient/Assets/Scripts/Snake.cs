@@ -1,125 +1,93 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using scMessage;
 
 public class Snake : MonoBehaviour
 {
 
 	// The parts of a snake are made up of prefab parts
 	// Last() is the tail
-	private List<Transform> segments;
-
+	protected List<GameObject> segments = new List<GameObject> ();
+	
 	// Prefab for the body parts
 	public GameObject body;
 	public GameObject tail;
-
-	// The speed of the snake in ms
-	// intially 0.1
-	private float speed;
-
-	// Rotation direction
-	private Quaternion dir;
-
-	// Helps simulate responsiveness
-	private Quaternion lastRotation;
-
-	// Bools for food eating
-	private bool apple;
-	private bool onion;
-	private bool mouse;
-
+	
 	// Use this for initialization
 	void Start ()
 	{
-		dir = Quaternion.identity;
-
-		// Sets the snake to start in the center
-		// TODO: Once multiplayer, the player number will matter
-		transform.position = new Vector3 (0, 0);
-		transform.rotation = dir;
-
-		segments = new List<Transform> ();
-
-		calcSpeed ();
-		// Start with one part
-		InvokeRepeating ("grow", 1.0f, 0.5f);
-
-		move ();
+	
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		input ();
-	}
-
-	void OnTriggerEnter2D (Collider2D coll)
-	{
-		Application.LoadLevel ("GameScene");
+	
 	}
 	
-	private void move ()
-	{
-		if (segments.Count > 0) {
-			for (int i = segments.Count - 1; i > 0; i--) {
-				segments [i].position = segments [i - 1].position;
-				segments [i].rotation = segments [i - 1].rotation;
-			}
-
-			segments [0].position = transform.position;
-			segments [0].rotation = transform.rotation;
-		}
-
-		lastRotation = transform.rotation;
-		transform.Translate (Vector2.right);
-	
-		Invoke ("move", speed);
-	}
-
-	public void grow ()
-	{
-		Vector3 pos = transform.position;
-		Quaternion rot = transform.rotation;
-		if (segments.Count > 0) {
-			pos = segments [segments.Count - 1].transform.position;
-			rot = segments [segments.Count - 1].transform.rotation;
-		}
-				
-		GameObject newSegment = (GameObject)Instantiate (body, pos - rot * new Vector3 (1, 0, 0), rot);
-
-		segments.Add (newSegment.transform);
-
-		calcSpeed ();
-	}
-
-
-	private void calcSpeed ()
-	{
-		speed = 0.1f + 0.005f * segments.Count;
+	public scObject snakeToSCObject ()
+	{		
+		// Segment for head
+		scObject snake = new scObject ("snake");
+		snake.addString ("username", Client.Instance.username);
+		snake.addFloat ("xPos", transform.position.x);
+		snake.addFloat ("yPos", transform.position.y);
+		snake.addFloat ("zPos", transform.position.z);
+		snake.addFloat ("xRot", transform.rotation.eulerAngles.x);
+		snake.addFloat ("yRot", transform.rotation.eulerAngles.y);
+		snake.addFloat ("zRot", transform.rotation.eulerAngles.z);
+		snake.addInt ("segments", segments.Count);
 		
-		if (speed > 0.20f) {
-			speed = 0.20f;
+		// New object for each segment
+		for (int i = 0; i < segments.Count; i++) {
+			snake.addFloat (i + "_xPos", segments [i].transform.position.x);
+			snake.addFloat (i + "_yPos", segments [i].transform.position.y);
+			snake.addFloat (i + "_zPos", segments [i].transform.position.z);
 		}
+		
+		return snake;
 	}
-
-	private void input ()
+	
+	public void scObjectToSnake (scObject s)
 	{
-		// Use the given input for compatability and easier customization
-		float horizontal = Input.GetAxisRaw ("Horizontal");
-		float vertical = Input.GetAxisRaw ("Vertical");
-
-		dir = transform.rotation;
-		// Snake can not move in the oppisite direction that it is moving
-		if (horizontal == -1 && !Mathf.Approximately (lastRotation.eulerAngles.z, 0)) {			// LEFT
-			dir.eulerAngles = new Vector3 (0, 0, 180);
-		} else if (horizontal == 1 && !Mathf.Approximately (lastRotation.eulerAngles.z, 180)) {	// RIGHT
-			dir.eulerAngles = new Vector3 (0, 0, 0);	
-		} else if (vertical == -1 && !Mathf.Approximately (lastRotation.eulerAngles.z, 90)) {		// DOWN
-			dir.eulerAngles = new Vector3 (0, 0, 270);	
-		} else if (vertical == 1 && !Mathf.Approximately (lastRotation.eulerAngles.z, 270)) {		// UP
-			dir.eulerAngles = new Vector3 (0, 0, 90);
+		// unpack position of head
+		Vector3 headPos = new Vector3 ();
+		headPos.x = s.getFloat ("xPos");
+		headPos.y = s.getFloat ("yPos");
+		headPos.z = s.getFloat ("zPos");
+		transform.position = headPos;
+		
+		// unpack rotation of head
+		Vector3 headRot = new Vector3 ();
+		headRot.x = s.getFloat ("xRot");
+		headRot.y = s.getFloat ("yRot");
+		headRot.z = s.getFloat ("zRot");
+		transform.eulerAngles = headRot;
+		
+		// unpack segments
+		int numSeg = s.getInt ("segments");
+		
+		if (numSeg < segments.Count) {
+			foreach (GameObject go in segments) {
+				Destroy (go);
+			}
+			
+			segments.Clear ();
 		}
-
-		transform.rotation = dir;
+		
+		for (int i = 0; i < numSeg; i++) {
+			
+			Vector3 pos = new Vector3 ();
+			pos.x = s.getFloat (i + "_xPos");
+			pos.y = s.getFloat (i + "_yPos");
+			pos.z = s.getFloat (i + "_zPos");
+			if (i >= segments.Count) {
+				GameObject newSegment = (GameObject)Instantiate (body, pos, Quaternion.identity);
+				segments.Add (newSegment);
+			} else {
+				segments [i].transform.position = pos;
+			}
+		}
 	}
 }

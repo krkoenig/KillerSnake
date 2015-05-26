@@ -16,14 +16,11 @@ public class Login : MonoBehaviour
 	private string username;
 	private string password;
 	
-	Client client;
-
 	// Use this for initialization
 	void Start ()
 	{
 		username = "";
 		password = "";
-		Client.Instance.connect ();
 	}
 
 	void OnGUI ()
@@ -34,6 +31,8 @@ public class Login : MonoBehaviour
 		// Make a background box
 		GUI.Box (new Rect (centerX - 150, centerY - 100, 300, 200), "Login");
 
+		GUI.Box (new Rect (centerX - 125, centerY - 45, 100, 25), "IP:");
+		Client.Instance.ipAddress = GUI.TextField (new Rect (centerX - 25, centerY - 45, 150, 25), Client.Instance.ipAddress, 20);
 		GUI.Box (new Rect (centerX - 125, centerY - 15, 100, 25), "Username:");
 		username = GUI.TextField (new Rect (centerX - 25, centerY - 15, 150, 25), username, 20);
 		GUI.Box (new Rect (centerX - 125, centerY + 15, 100, 25), "Password:");
@@ -51,9 +50,8 @@ public class Login : MonoBehaviour
 
 	private void sendLogin ()
 	{
-		message m = new message ("Login request");
-		scObject head = new scObject ("head");
-		head.addString ("command", "login");
+		message m = new message ("login");
+		scObject head = new scObject ("login");
 		head.addString ("username", username);
 		head.addString ("password", password);
 		m.addSCObject (head);
@@ -62,8 +60,9 @@ public class Login : MonoBehaviour
 	
 	public void loginResponse (message m)
 	{
-		if (m.getSCObject ("head").getBool ("success")) {
-			Application.LoadLevel ("GameScene");
+		if (m.getSCObject ("login").getBool ("success")) {
+			Client.Instance.username = username;
+			Application.LoadLevel ("LobbyScene");
 		}
 	}
 }

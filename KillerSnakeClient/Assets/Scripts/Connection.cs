@@ -10,59 +10,55 @@ using scMessage;
 
 public class Connection
 {
-	public Socket sSock;
+	public Socket socket;
 	private int MAX_INC_DATA = 512000;
 
 	public Connection (Socket s)
 	{
-		sSock = s;
-		ThreadPool.QueueUserWorkItem (new WaitCallback (HandleConnection));
+		socket = s;
+		ThreadPool.QueueUserWorkItem (new WaitCallback (handleConnection));
 	}
 
-	public void HandleConnection (object state)
+	public void handleConnection (object x)
 	{
 		Debug.Log ("Connected to server.");
-		Client.Instance.onConnect ();
 
-		try {
-			while (sSock.Connected) {
-				byte[] sizeinfo = new byte[4];
+		while (true) {
+			byte[] sizeInfo = new byte[4];
 
-				int bytesRead = 0, currentread = 0;
-
-				currentread = bytesRead = sSock.Receive (sizeinfo);
-
-				while (bytesRead < sizeinfo.Length && currentread > 0) {
-					currentread = sSock.Receive (sizeinfo, bytesRead, sizeinfo.Length - bytesRead, SocketFlags.None);
-					bytesRead += currentread;
-				}
-
-				int messagesize = BitConverter.ToInt32 (sizeinfo, 0);
-				byte[] message = new byte[messagesize];
-
-				bytesRead = 0;
-				currentread = bytesRead = sSock.Receive (message, bytesRead, message.Length - bytesRead, SocketFlags.None);
-
-				while (bytesRead < messagesize && currentread > 0) {
-					currentread = sSock.Receive (message, bytesRead, message.Length - bytesRead, SocketFlags.None);
-					bytesRead += currentread;
-				}
-
-				try {
-					message incObject = (message)conversionTools.convertBytesToObject (message);
-
-					if (incObject != null) {
-						Client.Instance.addServerMessageToQue (incObject);
-					}
-				} catch (Exception er) {
-					Debug.Log ("There was an error trying to get data: " + er.ToString ());
-				}
+			int bytesRead = 0, currentRead = 0;
+			try {
+				currentRead = bytesRead = socket.Receive (sizeInfo);
+			} catch {
+				break;
 			}
-		} catch {
-		}
+									
+			while (bytesRead < sizeInfo.Length && currentRead > 0) {
+				currentRead = socket.Receive (sizeInfo, bytesRead, sizeInfo.Length - bytesRead, SocketFlags.None);
+				bytesRead += currentRead;
+			}
 
+			int messagesize = BitConverter.ToInt32 (sizeInfo, 0);
+			byte[] message = new byte[messagesize];			
+
+			bytesRead = 0;
+			currentRead = bytesRead = socket.Receive (message, bytesRead, message.Length - bytesRead, SocketFlags.None);
+
+			while (bytesRead < messagesize && currentRead > 0) {
+				currentRead = socket.Receive (message, bytesRead, message.Length - bytesRead, SocketFlags.None);
+				bytesRead += currentRead;
+			}
+						
+			message incObject = (message)conversionTools.convertBytesToObject (message);
+			
+			if (incObject != null) {
+				
+				Client.Instance.addServerMessageToQueue (incObject);
+			}
+		}
+		
 		Debug.Log ("Disconnected from server.");
 		Client.Instance.connectedToServer = false;
-		sSock.Close ();
+		socket.Close ();
 	}
 }

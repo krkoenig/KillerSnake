@@ -48,23 +48,26 @@ public class Register : MonoBehaviour
 		GUI.Label (new Rect (centerX - 125, centerY + 45, 100, 40), "Confirm\nPassword:", center);
 		confirm = GUI.PasswordField (new Rect (centerX - 25, centerY + 57, 150, 25), confirm, '*', 20);
 
-		if (GUI.Button (new Rect (centerX - 50, centerY + 95, 100, 25), "Register")) {
+
+		if (GUI.Button (new Rect (centerX + 25, centerY + 95, 100, 25), "Register")) {
 			if (password.Length < 6) {
 				warning = "Password must be 6 character!";
 			} else if (!password.Equals (confirm)) {
 				warning = "Passwords don't match!";
 			} else {
+				Client.Instance.connect ();
 				sendRegister ();
 			}
 
 		}
+		if (GUI.Button (new Rect (centerX - 100, centerY + 95, 100, 25), "back"))
+			Application.LoadLevel ("LoginScene");
 	}
 
 	private void sendRegister ()
 	{
-		message m = new message ("Register request");
-		scObject head = new scObject ("head");
-		head.addString ("command", "register");
+		message m = new message ("register");
+		scObject head = new scObject ("register");
 		head.addString ("username", username);
 		head.addString ("password", password);
 		m.addSCObject (head);
@@ -73,7 +76,7 @@ public class Register : MonoBehaviour
 
 	public void registerResponse (message m)
 	{
-		if (m.getSCObject ("head").getBool ("success")) {
+		if (m.getSCObject ("register").getBool ("success")) {
 			Application.LoadLevel ("LoginScene");
 		} else {
 			warning = "Username is already taken!";

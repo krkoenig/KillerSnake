@@ -37,7 +37,7 @@ public class UserSnake : Snake
 
 		move ();
 		
-		// InvokeRepeating ("grow", 0.0f, 1.0f);
+		InvokeRepeating ("grow", 0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -48,19 +48,7 @@ public class UserSnake : Snake
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
-		if (coll.name.StartsWith("foodprefab") || coll.name.StartsWith("Fruit")) {
-			// Get longer in next Move call
-			grow ();
-			
-			// Remove the Food
-			Destroy(coll.gameObject); // This cause food stop spawning 
-		}
-		// TODO if collided with onion, decrease snake size
-		// Collided with Tail or Border
-		else {
-			// TODO 'You lose' screen
-			Application.LoadLevel("GameScene");
-		}
+		Application.LoadLevel ("GameScene");
 	}
 	
 	private void move ()

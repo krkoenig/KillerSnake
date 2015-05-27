@@ -79,6 +79,8 @@ public class LobbyManager : MonoBehaviour
 		
 		lobby.addBool ("start", start);
 		lobby.addInt ("start_id", id);
+
+		GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId = id;
 		
 		for (int i = 0; i < playerList.players.Count; i++) {
 			lobby.addString (i + "_username", playerList.players [i].username);

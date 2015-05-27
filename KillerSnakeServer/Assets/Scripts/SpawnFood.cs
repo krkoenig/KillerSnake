@@ -48,4 +48,27 @@ public class SpawnFood : MonoBehaviour {
 			Server.Instance.sendClientMessage (clients[i],m);
 		}
 	}
+
+	public message receiveDestroy (message m)
+	{
+		scObject foodInfo = m.getSCObject ("foodInfo");
+		float x = foodInfo.getFloat ("xPos");
+		float y = foodInfo.getFloat ("yPos");
+
+		List<Connection> clients = Server.Instance.getClients ();
+		for (int i = 0; i < clients.Count; i++) {
+			Server.Instance.sendClientMessage (clients[i],m);
+		}
+		
+		GameObject[] fs = GameObject.FindGameObjectsWithTag ("food");
+		
+		foreach (GameObject f in fs) {
+			if(f.transform.position.x == x && f.transform.position.y == y)
+				Destroy(f);
+		}
+
+		return m;
+	}
+
+
 }

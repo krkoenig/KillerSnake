@@ -42,4 +42,20 @@ public class SpawnFood : MonoBehaviour {
 		Spawn (type, x, y);
 	}
 
+	public void receiveDestroy (message m)
+	{
+		scObject foodInfo = m.getSCObject ("foodInfo");
+		float x = foodInfo.getFloat ("xPos");
+		float y = foodInfo.getFloat ("yPos");
+
+		Debug.Log ("get the destroy message");
+
+		GameObject[] fs = GameObject.FindGameObjectsWithTag ("food");
+
+		foreach (GameObject f in fs) {
+			if(f.transform.position.x == x && f.transform.position.y == y)
+				Destroy(f);
+		}
+	}
+
 }

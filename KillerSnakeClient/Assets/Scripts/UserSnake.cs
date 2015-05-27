@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using scMessage;
 
 public class UserSnake : Snake
 {
@@ -18,6 +19,7 @@ public class UserSnake : Snake
 	private bool apple = false;
 	private bool onion = false;
 	private bool rat = false;
+	private bool moveable = true;
 
 	// Use this for initialization
 	void Start ()
@@ -48,46 +50,56 @@ public class UserSnake : Snake
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
+		float fx = coll.gameObject.transform.position.x;
+		float fy = coll.gameObject.transform.position.y;
+		message m = new message ("foodDestroy");
+		scObject foodInfo = new scObject ("foodInfo");
+		foodInfo.addFloat ("xPos", fx);
+		foodInfo.addFloat ("yPos", fy);
+		m.addSCObject (foodInfo);
 		//food
 		if (coll.name.StartsWith ("apple")) {
 			apple = true;
-
+			Client.Instance.SendServerMessage (m);
 			Destroy (coll.gameObject);
 		} else if (coll.name.StartsWith ("onion")) {
 			onion = true;
-			
+			Client.Instance.SendServerMessage (m);
 			Destroy (coll.gameObject);
 		} else if (coll.name.StartsWith ("rat")) {
 			rat = true;
-			
+			Client.Instance.SendServerMessage (m);
 			Destroy (coll.gameObject);
 		} else {
-			Application.LoadLevel ("GameScene");
+			//Application.LoadLevel ("GameScene");
+			moveable = false;
 		}
-
+		    
 	}
 	
 	private void move ()
 	{
-		if (segments.Count > 0) {
-			for (int i = segments.Count - 1; i > 0; i--) {
-				segments [i].transform.position = segments [i - 1].transform.position;
-				segments [i].transform.rotation = segments [i - 1].transform.rotation;
+		if (moveable) {
+			if (segments.Count > 0) {
+				for (int i = segments.Count - 1; i > 0; i--) {
+					segments [i].transform.position = segments [i - 1].transform.position;
+					segments [i].transform.rotation = segments [i - 1].transform.rotation;
+				}
+
+				segments [0].transform.position = transform.position;
+				segments [0].transform.rotation = transform.rotation;
 			}
 
-			segments [0].transform.position = transform.position;
-			segments [0].transform.rotation = transform.rotation;
-		}
-
-		lastRotation = transform.rotation;
-		transform.Translate (Vector2.right);
+			lastRotation = transform.rotation;
+			transform.Translate (Vector2.right);
 	
-		if (apple) {
-			grow ();
-			apple = false;
-		}
+			if (apple) {
+				grow ();
+				apple = false;
+			}
 
-		Invoke ("move", speed);
+			Invoke ("move", speed);
+		}
 	}
 
 	public void grow ()

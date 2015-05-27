@@ -12,7 +12,7 @@ public class spwanfood: MonoBehaviour {
 
 	// TODO need border information from server
 	public Pair<int,int> Start (scObject s) {
-		Pair<int,int> food;
+
 		// init food coodinates
 		int x = (int)Random.Range(borderLeft,
 		                               borderRight);
@@ -20,9 +20,10 @@ public class spwanfood: MonoBehaviour {
 		int y = (int)Random.Range(borderBottom,
 		                                borderTop);
 		// create arrays for segments
-		float[] xlist;
-		float[] ylist;
 		int numSeg = s.getInt ("segments");
+		float[] xlist = new float[numSeg];
+		float[] ylist = new float[numSeg];
+
 		for (int i = 0; i < numSeg; i++) {
 			xlist[i] = s.getFloat (i + "_xPos");
 			ylist[i] = s.getFloat (i + "_yPos");
@@ -37,9 +38,8 @@ public class spwanfood: MonoBehaviour {
 			y = (int)Random.Range(borderLeft,
 			                      borderRight);
 		};
+		Pair<int,int> food = new Pair<int, int>(x,y);
 
-		food.First = x;
-		food.Second = y;
 
 		return food;
 	}

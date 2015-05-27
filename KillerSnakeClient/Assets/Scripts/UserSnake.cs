@@ -37,7 +37,7 @@ public class UserSnake : Snake
 
 		move ();
 		
-		InvokeRepeating ("grow", 0.0f, 1.0f);
+		// InvokeRepeating ("grow", 0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -48,7 +48,12 @@ public class UserSnake : Snake
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
-		Application.LoadLevel ("GameScene");
+		if (coll.name.StartsWith ("Fruit")) {
+			grow ();
+			Destroy(coll.gameObject);
+		} else {
+			Application.LoadLevel ("GameScene");
+		}
 	}
 	
 	private void move ()

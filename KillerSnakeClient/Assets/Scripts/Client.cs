@@ -75,6 +75,13 @@ public class Client : MonoBehaviour
 			GameObject.Find ("LobbyManager").GetComponent<LobbyManager> ().receiveUpdates (msg);
 		} else if (msg.messageText.Equals ("game")) {
 			GameObject.Find ("GameManager").GetComponent<GameManager> ().receiveUpdates (msg);
+<<<<<<< HEAD
+=======
+		} else if (msg.messageText.Equals ("food")) {
+			GameObject.Find ("Main Camera").GetComponent<SpawnFood> ().receiveUpdates (msg);
+		} else if (msg.messageText.Equals ("foodDestroy")) {
+			GameObject.Find ("Main Camera").GetComponent<SpawnFood> ().receiveDestroy (msg); 
+>>>>>>> pr/6
 		}
 	}
 	

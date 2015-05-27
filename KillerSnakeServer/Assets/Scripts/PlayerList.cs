@@ -6,11 +6,8 @@ public class PlayerList : MonoBehaviour
 {
 	public List<Player> players = new List<Player> ();
 
-<<<<<<< HEAD
-=======
 	public int startId;
 
->>>>>>> pr/6
 	void Awake ()
 	{
 		DontDestroyOnLoad (this);

@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-<<<<<<< HEAD
-=======
 using scMessage;
->>>>>>> pr/6
 
 public class UserSnake : Snake
 {
@@ -19,16 +16,10 @@ public class UserSnake : Snake
 	private Quaternion lastRotation;
 
 	// Bools for food eating
-<<<<<<< HEAD
-	private bool apple;
-	private bool onion;
-	private bool mouse;
-=======
 	private bool apple = false;
 	private bool onion = false;
 	private bool rat = false;
 	private bool moveable = true;
->>>>>>> pr/6
 
 	// Use this for initialization
 	void Start ()
@@ -38,21 +29,14 @@ public class UserSnake : Snake
 		// Sets the snake to start in the center
 		// TODO: Once multiplayer, the player number will matter
 
-		int userID = GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId;
-
-
-		transform.position = new Vector3 (0, userID, 0);
+		transform.position = new Vector3 (0, GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId, 0);
 		transform.rotation = dir;
 
 		calcSpeed ();
 
 		move ();
 		
-<<<<<<< HEAD
-		InvokeRepeating ("grow", 0.0f, 1.0f);
-=======
 		//InvokeRepeating ("grow", 0.0f, 1.0f);
->>>>>>> pr/6
 	}
 	
 	// Update is called once per frame
@@ -63,9 +47,6 @@ public class UserSnake : Snake
 
 	void OnTriggerEnter2D (Collider2D coll)
 	{
-<<<<<<< HEAD
-		Application.LoadLevel ("GameScene");
-=======
 		float fx = coll.gameObject.transform.position.x;
 		float fy = coll.gameObject.transform.position.y;
 		message m = new message ("foodDestroy");
@@ -88,30 +69,13 @@ public class UserSnake : Snake
 			Destroy (coll.gameObject);
 		} else {
 			//Application.LoadLevel ("GameScene");
-			moveable = false;
+			reset ();
 		}
 		    
->>>>>>> pr/6
 	}
 	
 	private void move ()
 	{
-<<<<<<< HEAD
-		if (segments.Count > 0) {
-			for (int i = segments.Count - 1; i > 0; i--) {
-				segments [i].transform.position = segments [i - 1].transform.position;
-				segments [i].transform.rotation = segments [i - 1].transform.rotation;
-			}
-
-			segments [0].transform.position = transform.position;
-			segments [0].transform.rotation = transform.rotation;
-		}
-
-		lastRotation = transform.rotation;
-		transform.Translate (Vector2.right);
-	
-		Invoke ("move", speed);
-=======
 		if (moveable) {
 			if (segments.Count > 0) {
 				for (int i = segments.Count - 1; i > 0; i--) {
@@ -133,7 +97,15 @@ public class UserSnake : Snake
 
 			Invoke ("move", speed);
 		}
->>>>>>> pr/6
+	}
+
+	private void reset ()
+	{
+		transform.position = new Vector3 (0, GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId, 0);
+		foreach (GameObject g in segments) {
+			Destroy (g);
+		}
+		segments.Clear ();
 	}
 
 	public void grow ()

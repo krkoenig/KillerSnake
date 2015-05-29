@@ -93,7 +93,7 @@ class Server : MonoBehaviour
 		} else if (msg.messageText.Equals ("game")) {
 			m = GameObject.Find ("GameManager").GetComponent<GameManager> ().receiveUpdates (msg);					
 		} else if (msg.messageText.Equals ("foodDestroy")) {
-			m = GameObject.Find ("Main Camera").GetComponent<SpawnFood> ().receiveDestroy (msg); 
+			m = GameObject.Find ("GameManager").GetComponent<SpawnFood> ().receiveDestroy (msg); 
 		} else {
 			m = new message ("invalid");
 		}

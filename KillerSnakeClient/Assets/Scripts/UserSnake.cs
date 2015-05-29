@@ -29,10 +29,7 @@ public class UserSnake : Snake
 		// Sets the snake to start in the center
 		// TODO: Once multiplayer, the player number will matter
 
-		int userID = GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId;
-
-
-		transform.position = new Vector3 (0, userID, 0);
+		transform.position = new Vector3 (0, GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId, 0);
 		transform.rotation = dir;
 
 		calcSpeed ();
@@ -72,7 +69,7 @@ public class UserSnake : Snake
 			Destroy (coll.gameObject);
 		} else {
 			//Application.LoadLevel ("GameScene");
-			moveable = false;
+			reset ();
 		}
 		    
 	}
@@ -100,6 +97,15 @@ public class UserSnake : Snake
 
 			Invoke ("move", speed);
 		}
+	}
+
+	private void reset ()
+	{
+		transform.position = new Vector3 (0, GameObject.Find ("PlayerList").GetComponent<PlayerList> ().startId, 0);
+		foreach (GameObject g in segments) {
+			Destroy (g);
+		}
+		segments.Clear ();
 	}
 
 	public void grow ()

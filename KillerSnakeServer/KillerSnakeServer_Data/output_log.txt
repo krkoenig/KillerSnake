@@ -1,6 +1,33 @@
 Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
 GfxDevice: creating device client; threaded=1
 Direct3D:
+<<<<<<< HEAD
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 555M    (ID=0xdcd)
+    Vendor:   NVIDIA
+    VRAM:     1488 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll (this message is harmless)
+Loading C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\scMessage.dll into Unity Child Domain
+- Completed reload, in  0.056 seconds
+desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Data.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: C:\Users\Kyle\Documents\GitHub\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Xml.dll (this message is harmless)
+=======
     Version:  Direct3D 11.0 [level 10.1]
     Renderer: Intel(R) HD Graphics Family (ID=0x126)
     Vendor:   Intel
@@ -27,6 +54,7 @@ Platform assembly: C:\Users\tommy\Desktop\KillerSnake\KillerSnakeServer\KillerSn
 Platform assembly: C:\Users\tommy\Desktop\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Data.dll (this message is harmless)
 Platform assembly: C:\Users\tommy\Desktop\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Transactions.dll (this message is harmless)
 Platform assembly: C:\Users\tommy\Desktop\KillerSnake\KillerSnakeServer\KillerSnakeServer_Data\Managed\System.Xml.dll (this message is harmless)
+>>>>>>> pr/6
 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -75,6 +103,19 @@ Platform assembly: C:\Users\tommy\Desktop\KillerSnake\KillerSnakeServer\KillerSn
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
+<<<<<<< HEAD
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.811685 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 163.
+Total: 0.270690 ms (FindLiveObjects: 0.028250 ms CreateObjectMapping: 0.014382 ms MarkObjects: 0.220353 ms  DeleteObjects: 0.006677 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Server.handleData (scMessage.message msg) [0x00000] in <filename unknown>:0 
+  at Server.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+=======
 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
@@ -488,4 +529,5 @@ UnloadTime: 0.300285 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 184.
 Total: 0.260754 ms (FindLiveObjects: 0.020525 ms CreateObjectMapping: 0.008742 ms MarkObjects: 0.223503 ms  DeleteObjects: 0.007602 ms)
+>>>>>>> pr/6
 

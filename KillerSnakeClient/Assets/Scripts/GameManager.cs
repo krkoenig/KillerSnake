@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using scMessage;
 
 public class GameManager : MonoBehaviour
 {		
 	PlayerList playerList;
-	
+	public Text users;
+	public Text scores;
 	// Use this for initialization
 	void Start ()
 	{
@@ -44,5 +46,15 @@ public class GameManager : MonoBehaviour
 		for (int i = 0; i < numSnakes - 1; i++) {
 			playerList.players [i].snake.scObjectToSnake (m.getSCObject (playerList.players [i].username + "_snake"));
 		}
+	}
+
+	public void receiveScoreBoard (message m)
+	{
+		scObject info = m.getSCObject ("info");
+		string names = info.getString ("names");
+		string scs = info.getString ("scs");
+
+		users.text = names;
+		scores.text = scs;
 	}
 }

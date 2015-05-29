@@ -27,6 +27,11 @@ public class Snake : MonoBehaviour
 	{
 	
 	}
+
+	public int length ()
+	{
+		return segments.Count;
+	}
 	
 	public scObject snakeToSCObject ()
 	{		

@@ -24,14 +24,14 @@ public class SpawnFood : MonoBehaviour {
 		int y = (int)Random.Range (-13,13);
 
 		//instantiate the food
-		int type = (int)Random.Range (1, 4);
-		if (type == 1) {
+		int type = (int)Random.Range (1, 6);
+		if (type == 1 || type == 2 || type == 3) {
 			Instantiate (apple, new Vector2 (x, y),
 			             Quaternion.identity);
-		} else if (type == 2) {
+		} else if (type == 4) {
 			Instantiate (onion, new Vector2 (x, y),
 			             Quaternion.identity);
-		} else if (type == 3){
+		} else if (type == 5){
 			Instantiate (rat, new Vector2 (x, y),
 			             Quaternion.identity);
 		}

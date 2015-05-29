@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 0b53dee725863b842ad302629437383a
-timeCreated: 1432596959
+timeCreated: 1432888171
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - apple: {fileID: 108754, guid: 3f5588c87e3a9a34aaf78e7815815d3d, type: 2}
+  - onion: {fileID: 174950, guid: c0b1ab77a26d77b47b607a8be62d96d4, type: 2}
+  - rat: {fileID: 132676, guid: 6ebb3781b514a22408037e5a532a8884, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

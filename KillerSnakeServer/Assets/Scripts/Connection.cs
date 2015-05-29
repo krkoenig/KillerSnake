@@ -12,6 +12,8 @@ using scMessage;
 class Connection
 {
 	public Socket socket;
+	public bool isclose = true;
+	public string clientName;
 	private int MAX_INC_DATA = 512000; // half a megabyte
 	
 	public Connection (Socket s)
@@ -20,11 +22,16 @@ class Connection
 		ThreadPool.QueueUserWorkItem (new WaitCallback (handleConnection));
 	}
 
+	public void setName(string n)
+	{
+		clientName = n;
+	}
+
 	public void handleConnection (object x)
 	{
 		// broadcast new connection
 		Server.Instance.print ("A client connected from the IP address: " + socket.RemoteEndPoint.ToString ());
-		
+		isclose = false;
 		while (true) {
 			byte[] sizeInfo = new byte[4];
 
@@ -93,5 +100,6 @@ class Connection
 
 		Server.Instance.print ("The client disconnected from IP address: " + socket.RemoteEndPoint.ToString ());
 		socket.Close ();
+		isclose = true;
 	}
 }

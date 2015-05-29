@@ -20,13 +20,13 @@ public class SpawnFood : MonoBehaviour {
 
 	//spawn the food
 	void Spawn(int type, int x, int y) {
-		if (type == 1) {
+		if (type == 1 || type == 2 || type == 3) {
 			Instantiate (apple, new Vector2 (x, y),
 			             Quaternion.identity);
-		} else if (type == 2) {
+		} else if (type == 4) {
 			Instantiate (onion, new Vector2 (x, y),
 			             Quaternion.identity);
-		} else if (type == 3){
+		} else if (type == 5){
 			Instantiate (rat, new Vector2 (x, y),
 			             Quaternion.identity);
 		}

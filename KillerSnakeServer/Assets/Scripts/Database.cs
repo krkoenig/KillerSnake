@@ -42,6 +42,7 @@ class Database
 		// Build the message
 		message m = new message ("login");
 		scObject head = new scObject ("login");
+		head.addString ("clientName", username);
 		head.addBool ("success", exists);
 		m.addSCObject (head);
 		return m;

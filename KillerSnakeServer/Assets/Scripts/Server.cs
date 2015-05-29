@@ -54,7 +54,14 @@ class Server : MonoBehaviour
 	{
 		for (int i = 0; i < incMessages.Count; i++) {
 			Pair<Connection, message> p = incMessages.Dequeue ();
-			sendClientMessage (p.First, handleData (p.Second));
+			message p2= handleData(p.Second);
+			if (p2.messageText.Equals ("login"))
+			{
+				scObject head2 = p2.getSCObject("login");
+				string cname = head2.getString("clientName");
+				p.First.setName(cname);
+			}
+			sendClientMessage(p.First,p2);
 		}
 	}
 	
@@ -116,4 +123,5 @@ class Server : MonoBehaviour
 	{
 		return clients;
 	}
+	
 }

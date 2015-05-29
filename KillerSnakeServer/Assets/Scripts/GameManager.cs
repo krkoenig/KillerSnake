@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEngine.UI;
 using System.Linq;
 using scMessage;
 
 public class GameManager : MonoBehaviour
 {		
+	//public Text clientNumber;
+
 	PlayerList playerList;
 	List<Pair<string,int>> scoreboard = new List<Pair<string, int>>();
 	
@@ -35,10 +38,22 @@ public class GameManager : MonoBehaviour
 		info.addString ("scs", scs);
 		sc.addSCObject (info);
 
+		//string check = "";
+
 		List<Connection> clients = Server.Instance.getClients ();
+
 		for (int i = 0; i < clients.Count; i++) {
-			Server.Instance.sendClientMessage (clients[i],sc);
+			if(clients[i].isclose){
+				playerList.removePlayer(clients[i].clientName);
+				clients.Remove(clients[i]);
+			}
+			else
+				Server.Instance.sendClientMessage (clients[i],sc);
+			//check = check + clients[i].socket.RemoteEndPoint + "\n";
 		}
+		//Server.Instance.nonListen ();
+	
+		//clientNumber.text = clients.Count.ToString();
 	}
 
 	static int SortByScore(Pair<string, int> p1, Pair<string, int> p2)

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using scMessage;
+using UnityEngine.UI;
 
 public class UserSnake : Snake
 {
@@ -20,6 +21,10 @@ public class UserSnake : Snake
 	private bool onion = false;
 	private bool rat = false;
 	private bool moveable = true;
+	private float oCounter = 5.0f;
+	public GameObject light;
+	public Text testText;
+
 
 	// Use this for initialization
 	void Start ()
@@ -38,11 +43,40 @@ public class UserSnake : Snake
 		
 		//InvokeRepeating ("grow", 0.0f, 1.0f);
 	}
+
+	void OnGUI ()
+	{
+		float centerX = Screen.width / 2;
+		float centerY = Screen.height / 2;
+		if (moveable == false) {
+			if (GUI.Button (new Rect (centerX - 125, centerY + 60, 100, 25), "Retry") ) {
+				reset();
+				move ();
+				//moveable = true;
+			}
+			if (GUI.Button (new Rect (centerX + 25, centerY + 60, 100, 25), "Quit")) {		
+				Application.Quit();
+			}
+		}
+	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		input ();
+		//testText.text = oCounter.ToString ();
+		if (onion == true) {
+			oCounter -= Time.deltaTime;
+			light.GetComponent<Light>().range = 400;
+			light.GetComponent<Light>().intensity = 8;
+			if (oCounter <= 0)
+			{
+				onion = false;
+				light.GetComponent<Light>().range = 100;
+				light.GetComponent<Light>().intensity = 4;
+				oCounter = 5;
+			}
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D coll)
@@ -69,7 +103,9 @@ public class UserSnake : Snake
 			Destroy (coll.gameObject);
 		} else {
 			//Application.LoadLevel ("GameScene");
-			reset ();
+			testText.text = "You Lose!";
+			moveable = false;
+			//	reset();
 		}
 		    
 	}
@@ -95,6 +131,7 @@ public class UserSnake : Snake
 				apple = false;
 			}
 
+
 			Invoke ("move", speed);
 		}
 	}
@@ -106,6 +143,8 @@ public class UserSnake : Snake
 			Destroy (g);
 		}
 		segments.Clear ();
+		moveable = true;
+		testText.text = "";
 	}
 
 	public void grow ()
@@ -153,4 +192,7 @@ public class UserSnake : Snake
 
 		transform.rotation = dir;
 	}
+
+
+	
 }

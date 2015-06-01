@@ -51,6 +51,7 @@ public class UserSnake : Snake
 		if (moveable == false) {
 			if (GUI.Button (new Rect (centerX - 125, centerY + 60, 100, 25), "Retry") ) {
 				reset();
+				move ();
 				//moveable = true;
 			}
 			if (GUI.Button (new Rect (centerX + 25, centerY + 60, 100, 25), "Quit")) {		
@@ -142,6 +143,8 @@ public class UserSnake : Snake
 			Destroy (g);
 		}
 		segments.Clear ();
+		moveable = true;
+		testText.text = "";
 	}
 
 	public void grow ()
